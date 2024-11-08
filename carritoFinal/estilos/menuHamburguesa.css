@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: rgb(195, 191, 191);
+}
+
+.logo {
+    max-width: 5rem;    /*establece el ancho máximo de un elemento */
+    width: 30px;
+    height: 30px;
+}
+
+.nav-list {
+    list-style: none; /*elimina los puntos de la lista*/
+    display: flex;
+    gap: 1rem;
+ 
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: black;
+}
+
+/*para que no se vean los botones(abrir/cerrar) cuando este en pantalla grande*/
+.abrir-menu,
+ .cerrar-menu{
+    display: none;
+}
+
+/*media queri*/
+@media screen and (max-width: 550px) {      /* se aplicara si el ancho de la ventana o pantalla es igual o menor a 550 píxeles.*/
+    .abrir-menu,
+    .cerrar-menu {         /*se ve el boton(abrir) */
+        display: block;
+        border:0;
+        font-size: 1.23rem;
+        cursor: pointer;
+
+    }
+
+    .cerrar-menu{
+        width: 40px;
+    }
+
+    .nav {      /*es para que desaparezcan las opciones del navbar y solo se vea el boton de abrir*/
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /*estilos del navbar*/
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0; /*pegado arriba*/
+        right: 0; /*pegado a la derecha*/
+        bottom: 0; /*pata que llegue hasta abajo */
+        background-color: rgb(224, 220, 220);
+        padding: 2rem;
+       box-shadow: 0 0 0 100vmax rgba(255, 255, 255, 0.5);/*color izquierda*/
+    }
+
+    /*esto se aplicara cuando haga click en el boton abrir y se veran los estilos del nav de arriba (a partir de linea 53)*/
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+        
+    }
+
+
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a {
+        color: rgb(19, 17, 17);
+    }
+
+    #carrito-toggle ,
+    span{
+        display: none;
+        
+    }
+    h1{
+        font-size: x-small;
+        text-align: left;
+        padding: 0;
+    }
+   .slider {
+        display: none;
+    }
+}
+

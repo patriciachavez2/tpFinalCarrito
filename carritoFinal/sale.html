@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/ios-filled/50/buy--v1.png">
+    <link rel="stylesheet" href="estilos/stylecarritoV3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="estilos/menuHamburguesa.css">
+    <link rel="stylesheet" href="estilos/falsaPublicidad.css">
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+</head>
+<body>
+   
+    <header>
+        
+        <h4> 🚚 Tienda Online ¡Llevate lo que queres! </h4>
+        <div class="carrito-container">
+            <!--menu hamburguesa-->
+            <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button> <!--boton de abrir-->
+            <nav class="nav" id="nav">
+                <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button> <!--boton de cerrar-->
+                <ul class="nav-list">
+                   <li><a href="indexcarritoV3.HTML">Inicio</a></li>
+                   <li><a href="sale.html">Sale</a</li>
+                   <li><a href="">Productos</a></li>
+                </ul>
+            </nav>
+             <!---->
+             <img src="assets/carrito-de-compras.png" alt="Carrito" class="carrito-img" id="carrito-toggle">
+            <span id="contador-productos">0</span> <!-- Contador para la cantidad de productos -->
+        </div>
+    </header>
+
+ 
+    <h2 class="animate__animated animate__flash">Productos Rebajados</h2>
+    
+    <main>
+        <section class="productos" id="productos">
+            <div class="items">
+                <img src="assets/Notebook1.png" alt="Notebook 1">
+                <h3>Notebook 1</h3>
+                <p class="rebaja">$1000</p><p>$500</p>
+                <p>Garantía: 1 año</p>
+                <button class="agregar_carrito">Agregar al Carrito</button>
+            </div>
+            <div class="items">
+                <img src="assets/Notebook2.png" alt="Notebook 2">
+                <h3>Notebook 2</h3>
+                <p class="rebaja">$2000</p><p>$1500</p>
+                <p>Garantía: 2 años</p>
+                <button class="agregar_carrito">Agregar al Carrito</button>
+            </div>
+            <div class="items">
+                <img src="assets/Notebook3.png" alt="Notebook 3">
+                <h3>Notebook 3</h3>
+                <p class="rebaja">$3000</p><p>$2500</p>
+                <p>Garantía: 2 años</p>
+                <button class="agregar_carrito">Agregar al Carrito</button>
+            </div>
+
+        </section>
+    </main>
+
+
+       <!--falsa publicidad tipo slider-->
+       <div class="slider-h">
+        <div class="slide-track-h">
+            <div class="slide-h">
+                <img src="assets/viví el hot sale (1).png" alt="publicidad">
+            </div>
+            <div class="slide-h">
+                <img src="assets/viví el hot sale.png" alt="publicidad">
+            </div>
+            <div class="slide-h">
+                <img src="assets/viví el hot sale (1).png" alt="publicidad">
+            </div>
+            <div class="slide-h">
+                <img src="assets/viví el hot sale.png" alt="publicidad">
+            </div>
+            <div class="slide-h">
+                <img src="assets/viví el hot sale (1).png" alt="publicidad">
+            </div>
+            <div class="slide-h">
+                <img src="assets/viví el hot sale.png" alt="publicidad">
+            </div>
+            <div class="slide-h">
+                <img src="assets/viví el hot sale (1).png" alt="publicidad">
+            </div>
+            <div class="slide-h">
+                <img src="assets/viví el hot sale.png" alt="publicidad">
+            </div>
+        </div>
+    </div>
+    <div class="buy-card" id="carrito" style="display: none;">
+        <ul class="nav-card">
+            <li>Imagen</li>
+            <li>Producto</li>
+            <li>Cantidad</li>
+            <li>Precio</li>
+            <li>Garantía</li>
+            <li>Acciones</li>
+        </ul>
+        <div id="lista-productos">
+            <!-- Aquí se agregan los productos -->
+        </div>
+        <div class="acciones">
+            <button onclick="carrito.vaciarCarrito()">Vaciar Carrito</button>
+            <button onclick="carrito.confirmarCompra()">Finalizar Compra</button>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Tienda de Productos. Todos los derechos reservados.</p>
+        <p>Contacto: <a href="mailto:contacto@tienda.com">contacto@tienda.com</a></p>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:contacto@tienda.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+    
+     <!--script general-->
+     <script src="scripts/scriptcarritoV3.js"></script>
+    <!--scrip del menu hamburguesa-->
+    <script src="scripts/menuHamburguesa.js"></script>
+    
+</body>
+</html>
